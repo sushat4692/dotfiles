@@ -1,0 +1,17 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+#	name = Satoshi UKAI
+#	email = sush@Satoshis-MacBook-Pro.local
+name = SUSH
+email = sush@sus-happy.net
+
+[core]
+  excludesfile = ~/.gitignore_global
+
+[alias]
+  diffzip = "!f(){ git archive --format=zip --prefix=_diff/ HEAD `git diff $1 --diff-filter=ACMR --name-only` -o _diff.zip;};f"
+  pall = push --all
+
+[remind]
+  paths = /Users/sush/Virtual/*
