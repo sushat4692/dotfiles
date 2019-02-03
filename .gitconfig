@@ -8,6 +8,7 @@ email = sush@sus-happy.net
 
 [core]
   excludesfile = ~/.gitignore_global
+	ignorecase = false
 
 [alias]
   diffzip = "!f(){ git archive --format=zip --prefix=_diff/ HEAD `git diff $1 --diff-filter=ACMR --name-only` -o _diff.zip;};f"
