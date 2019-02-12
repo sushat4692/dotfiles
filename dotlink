@@ -35,3 +35,6 @@
 .config/fish/config.fish,.config/fish/config.fish
 .config/fish/fishfile,.config/fish/fishfile
 .Brewfile,.Brewfile
+.npmrc,.npmrc
+.yarnrc,.yarnrc
+.vuerc,.vuerc
