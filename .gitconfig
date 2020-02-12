@@ -3,12 +3,13 @@
 # Please adapt and uncomment the following lines:
 #	name = Satoshi UKAI
 #	email = sush@Satoshis-MacBook-Pro.local
-name = SUSH
-email = sush@sus-happy.net
+	name = SUSH
+	email = sush@sus-happy.net
 
 [core]
   excludesfile = ~/.gitignore_global
-	ignorecase = false
+  ignorecase = false
+  filemode = false
 
 [alias]
   diffzip = "!f(){ git archive --format=zip --prefix=_diff/ HEAD `git diff $1 --diff-filter=ACMR --name-only` -o _diff.zip;};f"
@@ -16,3 +17,13 @@ email = sush@sus-happy.net
 
 [remind]
   paths = /Users/sush/Virtual/*
+
+[diff]
+  tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[merge]
+  tool = Kaleidoscope
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true

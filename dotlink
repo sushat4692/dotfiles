@@ -38,3 +38,5 @@
 .npmrc,.npmrc
 .yarnrc,.yarnrc
 .vuerc,.vuerc
+.zshrc,.zshrc
+.zprofile,.zprofile
