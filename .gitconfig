@@ -1,29 +1,12 @@
-# This is Git's per-user configuration file.
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [user]
-# Please adapt and uncomment the following lines:
-#	name = Satoshi UKAI
-#	email = sush@Satoshis-MacBook-Pro.local
-	name = SUSH
+	name = sushat4692
 	email = sush@sus-happy.net
-
-[core]
-  excludesfile = ~/.gitignore_global
-  ignorecase = false
-  filemode = false
-
-[alias]
-  diffzip = "!f(){ git archive --format=zip --prefix=_diff/ HEAD `git diff $1 --diff-filter=ACMR --name-only` -o _diff.zip;};f"
-  pall = push --all
-
-[remind]
-  paths = /Users/sush/Virtual/*
-
-[diff]
-  tool = Kaleidoscope
-[difftool "Kaleidoscope"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[merge]
-  tool = Kaleidoscope
-[mergetool "Kaleidoscope"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-  trustExitCode = true
+[gitflow]
+	multi-hotfix = true
+[pull]
+	ff = only
